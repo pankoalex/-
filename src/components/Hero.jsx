@@ -3,8 +3,16 @@ import React from 'react';
 const Hero = () => {
   return (
     <section className="relative px-6 py-32 md:py-48 overflow-hidden">
-      {/* Background gradients */}
-      <div className="absolute inset-0 bg-[url('/images/hero.png')] bg-cover bg-center opacity-30 mix-blend-luminosity"></div>
+      {/* Background Video */}
+      <video 
+        autoPlay 
+        loop 
+        muted 
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity"
+      >
+        <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" />
+      </video>
       <div className="absolute inset-0 bg-gradient-to-t from-anthracite-dark via-anthracite-dark/80 to-anthracite-dark/40"></div>
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-brand-green/20 rounded-full blur-[120px] pointer-events-none"></div>
       
@@ -22,7 +30,7 @@ const Hero = () => {
         </h1>
         
         <p className="max-w-2xl text-lg md:text-xl text-gray-300 mb-10 leading-relaxed font-light">
-          Пока классические котлы требуют внимания каждые 6 часов, автоматика <strong className="font-medium text-white shadow-sm">[Бренд]</strong> поддерживает стабильные +24°C в доме без вашего участия.
+          Пока классические котлы требуют внимания каждые 6 часов, автоматика <strong className="font-medium text-white shadow-sm">SIBERIA FORCE</strong> поддерживает стабильные +24°C в доме без вашего участия.
         </p>
         
         <button className="group relative px-8 py-4 bg-brand-green hover:bg-brand-green-light text-white font-medium text-lg rounded-xl transition-all duration-300 shadow-[0_0_30px_rgba(4,120,87,0.4)] hover:shadow-[0_0_40px_rgba(5,150,105,0.6)] hover:-translate-y-1 overflow-hidden">

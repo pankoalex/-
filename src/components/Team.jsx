@@ -14,7 +14,7 @@ const Team = () => {
       role: 'Руководитель сервисной службы',
       exp: 'Опыт: 12 лет',
       desc: 'На связи 24/7. Знает устройство котла до последнего винтика. Лично контролирует качество сварных швов на производстве.',
-      photo: '/images/engineer.png'
+      photo: '/images/manager.png'
     },
     {
       name: 'Елена Баринова',
@@ -31,7 +31,7 @@ const Team = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-sm font-bold tracking-widest text-brand-green uppercase mb-4">Наша команда</h2>
           <h3 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6">
-            Люди, которые закроют ваш <br className="hidden md:block" />Gap энергозависимости
+            Люди, которые решат вашу <br className="hidden md:block" />Проблему энергозависимости
           </h3>
           <p className="text-gray-400 text-lg">
             Мы не просто продаем железо. За каждым котлом стоят инженеры, которые отвечают за тепло в вашем доме.

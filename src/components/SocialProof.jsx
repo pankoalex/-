@@ -22,7 +22,7 @@ const SocialProof = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {videos.map((vid, i) => (
-            <div key={i} className="group relative rounded-2xl overflow-hidden bg-anthracite-light border border-white/5 cursor-pointer">
+            <a key={i} href="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" target="_blank" rel="noreferrer" className="block group relative rounded-2xl overflow-hidden bg-anthracite-light border border-white/5 cursor-pointer hover:shadow-[0_0_30px_rgba(4,120,87,0.3)] transition-all">
               <div 
                 className="aspect-[9/16] bg-anthracite-dark relative flex items-center justify-center bg-cover bg-center"
                 style={{ backgroundImage: "url('/images/social.png')" }}
@@ -48,7 +48,7 @@ const SocialProof = () => {
                   <p className="text-lg text-white font-serif">{vid.fuel}</p>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
