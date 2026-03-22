@@ -6,7 +6,7 @@ const Header = () => {
       <div className="flex items-center gap-4">
         {/* Логотип: Картинка пользователя */}
         <img 
-          src="/images/logo.png" 
+          src="/images/logo.jpg" 
           alt="Siberia Force" 
           className="h-16 md:h-24 w-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] object-contain" 
         />
