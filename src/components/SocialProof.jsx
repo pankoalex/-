@@ -1,10 +1,11 @@
 import React from 'react';
+import irkutskVideo from '../assets/Man_shows_boiler_202603222116.mp4';
 
 const SocialProof = () => {
   const videos = [
-    { city: 'Иркутск', temp: '-45°C', fuel: 'Уголь (Балахта)' },
-    { city: 'Красноярск', temp: '-42°C', fuel: 'Пеллеты' },
-    { city: 'Сургут', temp: '-47°C', fuel: 'Уголь (Орех)' },
+    { city: 'Иркутск', temp: '-45°C', fuel: 'Уголь (Балахта)', src: irkutskVideo },
+    { city: 'Красноярск', temp: '-42°C', fuel: 'Пеллеты', src: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4' },
+    { city: 'Сургут', temp: '-47°C', fuel: 'Уголь (Орех)', src: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4' },
   ];
 
   return (
@@ -22,19 +23,20 @@ const SocialProof = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {videos.map((vid, i) => (
-            <a key={i} href="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" target="_blank" rel="noreferrer" className="block group relative rounded-2xl overflow-hidden bg-anthracite-light border border-white/5 cursor-pointer hover:shadow-[0_0_30px_rgba(4,120,87,0.3)] transition-all">
-              <div 
-                className="aspect-[9/16] bg-anthracite-dark relative flex items-center justify-center bg-cover bg-center"
-                style={{ backgroundImage: "url('/images/social.png')" }}
-              >
-                {/* Mockup video thumbnail */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10"></div>
+            <div key={i} className="block group relative rounded-2xl overflow-hidden bg-anthracite-light border border-white/5 transition-all shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+              <div className="aspect-[9/16] bg-black relative flex items-center justify-center overflow-hidden">
+                <video 
+                  src={vid.src} 
+                  className="absolute inset-0 w-full h-full object-cover"
+                  controls
+                  playsInline
+                  preload="metadata"
+                />
                 
-                <div className="w-16 h-16 rounded-full bg-brand-green/90 text-white flex items-center justify-center z-20 group-hover:scale-110 group-hover:bg-brand-green-light transition-all shadow-[0_0_30px_rgba(4,120,87,0.5)]">
-                  <svg className="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                </div>
+                <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/80 to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/90 to-transparent z-10 pointer-events-none"></div>
                 
-                <div className="absolute top-4 left-4 z-20 flex gap-2">
+                <div className="absolute top-4 left-4 z-20 flex flex-wrap gap-2 pointer-events-none pr-4">
                   <span className="px-3 py-1 bg-black/50 backdrop-blur border border-white/10 rounded-full text-xs font-bold text-white flex items-center gap-1.5">
                     📍 {vid.city}
                   </span>
@@ -43,12 +45,12 @@ const SocialProof = () => {
                   </span>
                 </div>
                 
-                <div className="absolute bottom-4 left-4 right-4 z-20">
-                  <p className="text-sm text-gray-300 font-medium mb-1">Тип топлива</p>
-                  <p className="text-lg text-white font-serif">{vid.fuel}</p>
+                <div className="absolute bottom-4 left-4 right-4 z-20 pointer-events-none">
+                  <p className="text-sm text-gray-300 font-medium mb-1 drop-shadow-md">Тип топлива</p>
+                  <p className="text-lg text-white font-serif drop-shadow-md">{vid.fuel}</p>
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
