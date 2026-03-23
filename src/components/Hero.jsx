@@ -3,16 +3,12 @@ import React from 'react';
 const Hero = () => {
   return (
     <section className="relative px-6 py-32 md:py-48 overflow-hidden">
-      {/* Background Video */}
-      <video 
-        autoPlay 
-        loop 
-        muted 
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity"
-      >
-        <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" />
-      </video>
+      {/* Background Logo */}
+      <img 
+        src="/images/logo.png" 
+        alt="Background Logo" 
+        className="absolute inset-0 w-full h-full object-contain opacity-20 mix-blend-luminosity p-8 md:p-24"
+      />
       <div className="absolute inset-0 bg-gradient-to-t from-anthracite-dark via-anthracite-dark/80 to-anthracite-dark/40"></div>
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-brand-green/20 rounded-full blur-[120px] pointer-events-none"></div>
       
